@@ -6,6 +6,7 @@
   {{ block.super }}
   <!-- Animate.css -->
   <link href="/static/vendors/animate.css/animate.min.css" rel="stylesheet">
+    <script src="/static/vendors/jquery/dist/jquery.js"></script>
 {% endblock stylesheets %}
 
 {% block body_class %}login{% endblock body_class %}
@@ -18,24 +19,25 @@
     <div class="login_wrapper">
       <div class="animate form login_form">
         <section class="login_content">
-          <form>
-            <h1>Login Form</h1>
+          <form action="login/" method="post">
+              {% csrf_token %}
+            <h1>用户登录</h1>
             <div>
-              <input type="text" class="form-control" placeholder="Username" required="" />
+              <input type="text" class="form-control" placeholder="email" required="" name ="email"/>
             </div>
             <div>
-              <input type="password" class="form-control" placeholder="Password" required="" />
+              <input type="password" class="form-control" placeholder="Password" required="" name="passWord"/>
             </div>
             <div>
-              <a class="btn btn-default submit" href="index.html">Log in</a>
-              <a class="reset_pass" href="#">Lost your password?</a>
+              <button class="btn btn-default submit">登录</button>
+              <a class="reset_pass" href="#" id="zhmm">找回密码</a>
             </div>
 
             <div class="clearfix"></div>
 
             <div class="separator">
-              <p class="change_link">New to site?
-                <a href="#signup" class="to_register"> Create Account </a>
+              <p class="change_link">现在注册？
+                <a href="#signup" class="to_register" id="regedit"> 注册账号 </a>
               </p>
 
               <div class="clearfix"></div>
@@ -88,4 +90,5 @@
     </div>
   </div>
 {% endblock body %}
+
 

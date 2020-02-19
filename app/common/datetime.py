@@ -7,3 +7,5 @@ class getNow(object):
         # self.userID = self.userID + 1
         self.date = time.strftime("%Y-%m-%d",time.localtime(time.time()))
         print(self.date)
+if __name__ =="__main__":
+    print(getNow.date)

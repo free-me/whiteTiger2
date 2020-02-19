@@ -35,7 +35,7 @@
         <div class="col-md-6 col-sm-6 col-xs-12">
           <div class="x_panel">
             <div class="x_title">
-              <h2><i class="fa fa-bars"></i> 资产添加 <small>Float left</small></h2>
+              <h2><i class="fa fa-bars"></i> 资产添加 <small> </small></h2>
               <ul class="nav navbar-right panel_toolbox">
                 <li><a class="collapse-link"><i class="fa fa-chevron-up"></i></a>
                 </li>
@@ -55,6 +55,7 @@
             </div>
             <div class="x_content">
                 <script>{{ code }}</script>
+{#                主机资产添加tab   #}
               <div class="" role="tabpanel" data-example-id="togglable-tabs">
                 <ul id="myTab" class="nav nav-tabs bar_tabs" role="tablist">
                   <li role="presentation" class="active"><a href="#tab_content1" id="home-tab" role="tab" data-toggle="tab" aria-expanded="true">主机资产添加</a>
@@ -109,7 +110,7 @@
                 <div class="ln_solid"></div>
                 <div class="form-group">
                   <div class="col-md-6 col-sm-6 col-xs-12 col-md-offset-3">
-                    <button type="submit" class="btn btn-success">Submit</button><button class="btn btn-primary" type="button">Cancel</button>
+                    <button type="submit" class="btn btn-success">提交</button><button class="btn btn-primary" type="button">取消</button>
 
                   </div>
                 </div>
@@ -117,12 +118,60 @@
               </form>
                   </div>
                   <div role="tabpanel" class="tab-pane fade" id="tab_content2" aria-labelledby="profile-tab">
-                    <p>Food truck fixie locavore, accusamus mcsweeney's marfa nulla single-origin coffee squid. Exercitation +1 labore velit, blog sartorial PBR leggings next level wes anderson artisan four loko farm-to-table craft beer twee. Qui photo
-                      booth letterpress, commodo enim craft beer mlkshk aliquip</p>
+                    <form id="demo-form2" data-parsley-validate class="form-horizontal form-label-left" action="appInfoAddForm/" method="post">
+                      {% csrf_token %}
+                <div class="form-group">
+                  <label class="control-label col-md-3 col-sm-3 col-xs-12" for="appNname">应用名称 <span class="required">*</span>
+                  </label>
+                  <div class="col-md-6 col-sm-6 col-xs-12">
+                    <input type="text" name="appNname" id="appNname" required="required" class="form-control col-md-7 col-xs-12">
+                  </div>
+                </div>
+                <div class="form-group">
+                  <label class="control-label col-md-3 col-sm-3 col-xs-12" for="appAdd">应用地址 <span class="required">*</span>
+                  </label>
+                  <div class="col-md-6 col-sm-6 col-xs-12">
+                    <input type="text" id="appAdd" name="appAdd" required="required" class="form-control col-md-7 col-xs-12">
+                  </div>
+                </div>
+                <div class="form-group">
+                  <label for="netmask" class="control-label col-md-3 col-sm-3 col-xs-12">端口</label>
+                  <div class="col-md-6 col-sm-6 col-xs-12">
+                    <input id="netmask" class="form-control col-md-7 col-xs-12" type="text" name="portNum">
+                  </div>
+                </div>
+{#                <div class="form-group">#}
+{#                  <label class="control-label col-md-3 col-sm-3 col-xs-12">操作系统</label>#}
+{#                  <div class="col-md-6 col-sm-6 col-xs-12">#}
+{#                    <div id="gender" class="btn-group" data-toggle="buttons">#}
+{#                      <label class="btn btn-default" data-toggle-class="btn-primary" data-toggle-passive-class="btn-default">#}
+{#                        <input type="radio" name="osVersion" value="Windows"> Windows#}
+{#                      </label>#}
+{#                      <label class="btn btn-primary" data-toggle-class="btn-primary" data-toggle-passive-class="btn-default">#}
+{#                        <input type="radio" name="osVersion" value="Linux"> Linux#}
+{#                      </label>#}
+{#                    </div>#}
+{#                  </div>#}
+{#                </div>#}
+                <div class="form-group">
+                  <label class="control-label col-md-3 col-sm-3 col-xs-12">URL路径<span class="required">*</span>
+                  </label>
+                  <div class="col-md-6 col-sm-6 col-xs-12">
+                    <input id="birthday" name="path" class="date-picker form-control col-md-7 col-xs-12" required="required" type="text" value="/">
+                  </div>
+                </div>
+                <div class="ln_solid"></div>
+                <div class="form-group">
+                  <div class="col-md-6 col-sm-6 col-xs-12 col-md-offset-3">
+                    <button type="submit" class="btn btn-success">提交</button><button class="btn btn-primary" type="button">取消</button>
+
+                  </div>
+                </div>
+
+              </form>
                   </div>
                   <div role="tabpanel" class="tab-pane fade" id="tab_content3" aria-labelledby="profile-tab">
-                    <p>xxFood truck fixie locavore, accusamus mcsweeney's marfa nulla single-origin coffee squid. Exercitation +1 labore velit, blog sartorial PBR leggings next level wes anderson artisan four loko farm-to-table craft beer twee. Qui photo
-                      booth letterpress, commodo enim craft beer mlkshk </p>
+                    <p>x22222 </p>
                   </div>
                 </div>
               </div>
