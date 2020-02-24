@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="WebServers">
+    <option name="servers">
+      <webServer id="d62af20b-0812-4feb-a984-2adf40b53524" name="腾讯" url="http://111.229.250.195/">
+        <fileTransfer host="111.229.250.195" port="22" privateKey="D:\soft\vps_ma\tencent" rootFolder="/home/var/www/" accessType="SFTP" keyPair="true">
+          <advancedOptions>
+            <advancedOptions dataProtectionLevel="Private" passiveMode="true" shareSSLContext="true" />
+          </advancedOptions>
+          <option name="port" value="22" />
+        </fileTransfer>
+      </webServer>
+    </option>
+  </component>
+</project>
